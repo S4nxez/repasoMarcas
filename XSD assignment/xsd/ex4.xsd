@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="title">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="type"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="edition" type="xs:integer"/>
+	<xs:element name="type" type="xs:string"/>
+	<xs:element name="price" type="xs:double"/>
+	<xs:element name="first" type="xs:string"/>
+	<xs:element name="middle" type="xs:string"/>
+	<xs:element name="last" type="xs:string"/>
+	<xs:element name="month">
+		<xs:simpleType>
+			<xs:restriction base="xs:unsignedByte">
+				<xs:minInclusive value="1"/>
+				<xs:maxInclusive value="12"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="day"/>
+	<xs:element name="year" type="xs:gYear"/>
+
+	<xs:attribute name="isbn" type="xs:string"/>
+
+	<xs:element name="books">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="book" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="book">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="title" minOccurs="1"/>
+				<xs:element ref="edition" minOccurs="1"/>
+				<xs:element ref="author" maxOccurs="unbounded" minOccurs="1"/>
+				<xs:element ref="publishedDate" minOccurs="1"/>
+				<xs:element ref="type" minOccurs="1"/>
+				<xs:element ref="price" minOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute ref="isbn"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="author">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="first"/>
+				<xs:element ref="middle"/>
+				<xs:element ref="last"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="publishedDate">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="month"/>
+				<xs:element ref="day"/>
+				<xs:element ref="year"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:attribute name="type">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="H"/>
+				<xs:enumeration value="P"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+</xs:schema>

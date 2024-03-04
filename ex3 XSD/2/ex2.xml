@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ex2.xsd">
+
+		<book>
+			<name>The taboo book</name>
+			<qualificatisdon>dsf</qualificatisdon>
+			<born>hola</born>
+		</book>
+		<book>
+			<isbn></isbn>
+			<title></title>
+			<author>
+				<name></name>
+				<born></born>
+				<dead></dead>
+			</author>
+			<character>
+				<name></name>
+				<born>12-23-1232</born>
+				<qualification></qualification>
+			</character>
+		</book>
+		<book>
+			<isbn>123</isbn>
+			<title></title>
+		</book>
+</library>

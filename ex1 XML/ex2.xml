@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+
+<students>
+	<student id = "0533Q">
+		<name>Daniel Sanchez</name>
+		<address>Barajas, 28042 Madrid</address>
+		<dob>22/05/2002</dob>
+		<subjects>
+			<subject>computer science</subject>
+			<subject>chemistry</subject>
+			<subject>sociology</subject>
+		</subjects>
+	</student>
+</students>

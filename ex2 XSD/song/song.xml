@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Song xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="song.xsd" prod="EC1">
+	<Id>123</Id>
+	<Title>Hola</Title>
+	<Published>true</Published>
+	<DatePub>1965-09-05</DatePub>
+	<Artist>sdadasda</Artist>
+	<Company></Company>
+</Song>
